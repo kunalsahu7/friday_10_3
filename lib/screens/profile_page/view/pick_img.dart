@@ -1,15 +1,16 @@
-import 'package:bottom_provider/screens/home_page/provider/homepage_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
+import '../../home_page/provider/homepage_provider.dart';
+
+class pick extends StatefulWidget {
+  const pick({Key? key}) : super(key: key);
 
   @override
-  State<home> createState() => _homeState();
+  State<pick> createState() => _pickState();
 }
 
-class _homeState extends State<home> {
+class _pickState extends State<pick> {
   Providerhome? pro;
 
   @override
@@ -23,13 +24,13 @@ class _homeState extends State<home> {
         ),
         body: GridView.builder(
           gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.all(15),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'final', arguments: index);
+                  Navigator.pushReplacementNamed(context, 'profile', arguments: index);
                 },
                 child: Container(
                   height: 10,

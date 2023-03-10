@@ -28,7 +28,7 @@ class _videouiState extends State<videoui> {
               decoration: BoxDecoration(
                   color: Colors.black,
               ),
-              child: Image.asset("${videopro!.imagelist[index]}",fit: BoxFit.fill,),
+              child: Image.asset("${videopro!.imagelist[index]}",fit: BoxFit.cover,),
             ),
           );
         },itemCount: 15,)
